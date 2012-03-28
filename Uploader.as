@@ -1,6 +1,7 @@
 package  
 {
 	import flash.display.Sprite;
+	import flash.system.Security;
 	import flash.display.Loader;
 	import flash.display.Bitmap;
 	import flash.display.MovieClip;
@@ -25,6 +26,7 @@ package
 			stage.align = flash.display.StageAlign.TOP_LEFT;  
 			stage.scaleMode = flash.display.StageScaleMode.NO_SCALE;
 			stage.addEventListener(Event.RESIZE, whenResize);
+			Security.allowDomain("*");
 
 			var field:String = "file";
 			if(stage.loaderInfo.parameters.field){
