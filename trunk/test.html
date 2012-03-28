@@ -28,10 +28,13 @@ function onUploadEnd(e){
 	console.log(e);
 }
 
+function cancel(){
+	document.getElementById("uploader").cancel();
+}
 </script>
 <body>
 <div style="width:100%;height:100%">
-<EMBED src="Uploader.swf?maxsize=300&logo=http://static.youku.com/v1.0.0752/index/img/youkulogo-s.png&url=test_upload.php&field=file" quality=high bgcolor="#cccccc" WIDTH="100%" HEIGHT="100%" NAME="Yourfilename" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
+<EMBED id="uploader" src="Uploader.swf?maxsize=300&logo=http://static.youku.com/v1.0.0752/index/img/youkulogo-s.png&url=test_upload.php&field=file" quality=high bgcolor="#cccccc" WIDTH="100%" HEIGHT="100%" NAME="Yourfilename" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
 </div>
 </body>
 </html>

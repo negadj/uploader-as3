@@ -12,6 +12,7 @@ package com.ledui{
 			_url = url;
 			_field= field;
 			_fileRef = new FileReference;
+			js.callback("cancel",cancel);
 			_fileRef.addEventListener(Event.CANCEL, onCancel);
 			_fileRef.addEventListener(Event.COMPLETE, onComplete);
 			_fileRef.addEventListener(Event.SELECT, onSelect);
@@ -22,6 +23,9 @@ package com.ledui{
 			_fileRef.addEventListener(IOErrorEvent.IO_ERROR, onError);
 
 			_fileRef.addEventListener(DataEvent.UPLOAD_COMPLETE_DATA, onUploadEnd);
+		}
+		private function cancel():void{
+			_fileRef.cancel();
 		}
 		public function setMaxSize(maxsize:Number):void{
 			_maxsize = maxsize;
